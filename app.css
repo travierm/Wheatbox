@@ -1,0 +1,116 @@
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+.col-1 {
+  flex-basis: 8.333%;
+}
+.col-2 {
+  flex-basis: 16.666%;
+}
+.col-3 {
+  flex-basis: 25%;
+}
+.col-4 {
+  flex-basis: 33.333%;
+}
+.col-5 {
+  flex-basis: 41.666%;
+}
+.col-6 {
+  flex-basis: 50%;
+}
+
+:root {
+  --navbar-background: wheat;
+  --card-background: #9ac9db;
+}
+
+.card {
+  border: 1px solid grey;
+  border-radius: 5px;
+  height: 140px;
+  width: 140px;
+  background-color: var(--card-background);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 10px;
+}
+
+.card-container {
+  width: 550px;
+  display: flex;
+
+  flex-wrap: wrap;
+  flex-direction: row;
+
+  align-items: flex-start;
+  align-content: flex-start;
+
+  justify-content: flex-start;
+
+  margin: 15px;
+}
+
+.navbar {
+  list-style: none;
+  background-color: var(--navbar-background);
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.title {
+  display: block;
+  padding: 1em;
+  color: black;
+  margin-right: auto;
+}
+
+.navbar a {
+  text-decoration: none;
+  display: block;
+  padding: 1em;
+  color: black;
+}
+
+.navbar a:hover {
+  color: white;
+  background-color: var(--card-background);
+}
+
+@media all and (max-width: 800px) {
+  .navbar {
+    justify-content: space-around;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .navbar {
+    flex-flow: column wrap;
+    padding: 0;
+  }
+  .navbar a {
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  .navbar li:last-of-type a {
+    border-bottom: none;
+  }
+}
